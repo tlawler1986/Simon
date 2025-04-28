@@ -34,7 +34,6 @@ body {
     background-color:green;
 }
    
-
 .top-left-panel {    
     border-top-left-radius: 100%;
     background-color: yellow;
@@ -80,6 +79,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .start-button:hover {
     background-color: green;
 }   
