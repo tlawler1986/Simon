@@ -1,0 +1,179 @@
+body {
+   background-image: url('../images/background.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+}
+
+.toggle {
+    margin-left: 75px;
+    margin-right: 20px;
+}
+
+#outer-circle {
+    background: #385a94;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    border-style: solid;
+    border-width: 10px;
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: 8px 8px 15px 5px #888888
+}
+
+ 
+#topLeft {    
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px 0 0 0;
+    -moz-border-radius: 250px 0 0 0;
+    -webkit-border-radius: 250px 0 0 0;
+    background-color: yellow;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    border-style: solid;
+    border-width: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#topRight {    
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0px 250px 0 0;
+    -moz-border-radius: 0 250px 0 0;
+    -webkit-border-radius: 0 250px 0 0;
+    background-color: green;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 0;
+    border-style: solid;
+    border-width: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+    
+#bottomLeft {    
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 0 250px;
+    -moz-border-radius: 0 0 0 250px;
+    -webkit-border-radius: 0 0 0 250px;
+    background-color: blue;
+    top: 50%;
+    left: 50%;
+    margin: 0 -250px 0 -250px;
+    border-style: solid;
+    border-width: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+ }
+
+ #bottomRight {    
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 250px 0;
+    -moz-border-radius: 0 0 250px 0;
+    -webkit-border-radius: 0 0 250px 0;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 -250px 0;
+    border-style: solid;
+    border-width: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+ }
+
+    
+ .button {
+    border-radius: 50%;
+    font-size: 1.5em;
+    background-color: lightgray;
+    margin-top: 100px;
+ }
+    
+ .button:hover {
+     background-color: green;
+  }   
+
+
+    
+#switches {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 200px;
+    margin-top: 150px;
+    font-size: 10px;
+ }
+    
+ 
+ #title {
+     position: absolute;
+     font-family: 'Press Start 2P', cursive;
+     font-size: 30px;
+     margin-left: 35px;
+     margin-top: 40px;
+     color: white;
+    }
+    
+#turn {
+    position: absolute;
+    background: #385a94;
+    color: red;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    height: 30px;
+    width: 130px;
+    margin-left: 190px;
+    margin-top: 300px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+}
+    
+.text2 {
+    position: absolute;
+    margin-left: 225px;
+    margin-top: 335px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: white;
+}
+
+.text1 {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 190px;
+    margin-top: 270px;
+    color: white;
+    font-size: 10px;
+}
+    
+#inner-circle {
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border-style: solid;
+    border-width: 10px;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
