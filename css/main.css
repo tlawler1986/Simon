@@ -24,8 +24,7 @@ body {
     box-shadow: 8px 8px 15px 5px #888888
 }
 
- 
-#topLeft {    
+ #topLeft {    
     position: absolute;
     height: 250px;
     width: 250px;
@@ -144,6 +143,14 @@ body {
     line-height: 30px;
 }
     
+.text1 {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 190px;
+    margin-top: 270px;
+    color: white;
+    font-size: 10px;
+}
 .text2 {
     position: absolute;
     margin-left: 225px;
@@ -153,15 +160,6 @@ body {
     color: white;
 }
 
-.text1 {
-    position: absolute;
-    font-family: 'Press Start 2P', cursive;
-    margin-left: 190px;
-    margin-top: 270px;
-    color: white;
-    font-size: 10px;
-}
-    
 #inner-circle {
     position: absolute;
     background: black;

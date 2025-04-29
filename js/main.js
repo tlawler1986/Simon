@@ -44,7 +44,7 @@ const bottomRight = document.querySelector("#bottomRight");
 onButton.addEventListener('click', (event) => {
     if (onButton.checked == true) {
         on = true; 
-        turnCounter.innerHTML = "-"; //reset the turn counter
+        turnCounter.innerHTML = "0"; //reset the turn counter
     }   else {
         on = false; 
         turnCounter.innerHTML = ""; 
@@ -52,14 +52,14 @@ onButton.addEventListener('click', (event) => {
         clearInterval(intervalId); 
     }
 });
-// Function onButton is the function that turns the game on and off, and resets the turn counter
+// onButton is the what that turns the game on and off, and resets the turn counter
 
 startButton.addEventListener('click', (event) => {
     if (on || win) {
         play ();        
     }
 });
-// Function startButton is the function that starts the game, and resets the game if the player has won
+// startButton is what starts the game, and resets the game if the player has won
 
 topLeft.addEventListener('click', (event) => {
     if (on) {
@@ -73,7 +73,7 @@ topLeft.addEventListener('click', (event) => {
         }
     }
 })
-// Function topLeft is the function that checks if the player has clicked the top left button, and plays the sound and changes the color of the button
+// topLeft is what checks if the player has clicked the top left button, and plays the sound and changes the color of the button
 
 topRight.addEventListener('click', (event) => {
     if (on) {
@@ -87,7 +87,7 @@ topRight.addEventListener('click', (event) => {
         }
     }
 })
-// Function topRight is the function that checks if the player has clicked the top right button, and plays the sound and changes the color of the button
+// topRight is what checks if the player has clicked the top right button, and plays the sound and changes the color of the button
 
 bottomLeft.addEventListener('click', (event) => {
     if (on) {
@@ -101,7 +101,7 @@ bottomLeft.addEventListener('click', (event) => {
         }
     }
 })
-// Function bottomLeft is the function that checks if the player has clicked the bottom left button, and plays the sound and changes the color of the button
+// bottomLeft is what checks if the player has clicked the bottom left button, and plays the sound and changes the color of the button
 
 bottomRight.addEventListener('click', (event) => {
     if (on) {
@@ -115,7 +115,7 @@ bottomRight.addEventListener('click', (event) => {
         }
     }
 })
-// Function bottomRight is the function that checks if the player has clicked the bottom right button, and plays the sound and changes the color of the button
+// bottomRight is what checks if the player has clicked the bottom right button, and plays the sound and changes the color of the button
       
 
 
@@ -123,7 +123,7 @@ bottomRight.addEventListener('click', (event) => {
 /*----- functions -----*/
 
 function play() {
-    win = false;
+    win = false; 
     sequence = [];
     playerSequence = [];
     flash = 0;
@@ -131,7 +131,7 @@ function play() {
     turn = 1;
     turnCounter.innerHTML = 1;
     good = true; //player hasn't hit any wrong buttons
-    for (var i = 0; i < TOTAL_ROUNDS; i++) {     //go through loop 10 times to win **********
+    for (var i = 0; i < TOTAL_ROUNDS; i++) {     //go through TOTAL_ROUNDS times to win
         sequence.push(Math.floor(Math.random() * 4) +1); //push a random number between 1 and 4 into the sequence array
     }
     compTurn = true; 
@@ -157,7 +157,7 @@ function gameTurn() {
             flash++; 
             setTimeout(() => {
                 clearColor(); //clear the color after the flash
-            }, 400);
+            }, 400); // in milliseconds
         }, 200); // how long the flash is m/s
     }; 
 }
@@ -218,27 +218,27 @@ function flashColor () {
 
 function check() {
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
-        good = false; 
+        good = false; // if the player clicks the wrong button, good is false
     }
-    if (playerSequence.length == TOTAL_ROUNDS && good) { //******* winner change
-        winGame(); 
+    if (playerSequence.length == TOTAL_ROUNDS && good) { 
+        winGame(); // if the player has clicked all the buttons in the right order, they win
     }
-        if (good == false) {
+        if (good == false) { 
             flashColor();
-            turnCounter.innerHTML = "LOSER";
+            turnCounter.innerHTML = "LOSER"; 
             setTimeout(() => {
                 turnCounter.innerHTML = turn;
                 clearColor();
         }, 800);
         noise = false;
     }
-    if (turn == playerSequence.length && good && !win) {
-        turn++;
-        playerSequence = [];
-        compTurn = true;
-        flash = 0;
-        turnCounter.innerHTML = turn;
-        intervalId = setInterval(gameTurn, 800);
+    if (turn == playerSequence.length && good && !win) { // if the player has clicked all the buttons in the right order, and they are on the right turn
+        turn++; 
+        playerSequence = []; 
+        compTurn = true; 
+        flash = 0; // reset the flash
+        turnCounter.innerHTML = turn; // update the turn counter
+        intervalId = setInterval(gameTurn, 800); 
     }
 }
 //function check is the function that checks if the player has clicked the right buttons, if they have won or lost, and if they are on the right turn
@@ -246,7 +246,7 @@ function check() {
 function winGame() {
     flashColor();
     turnCounter.innerHTML = "WINNER";
-    on = false;
-    win = true;
+    on = false; 
+    win = true; 
 }
 //function winGame is the function that plays the winning sound and changes the color of the buttons when the player wins
