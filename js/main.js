@@ -52,12 +52,14 @@ onButton.addEventListener('click', (event) => {
         clearInterval(intervalId); 
     }
 });
+// Function onButton is the function that turns the game on and off, and resets the turn counter
 
 startButton.addEventListener('click', (event) => {
     if (on || win) {
         play ();        
     }
 });
+// Function startButton is the function that starts the game, and resets the game if the player has won
 
 topLeft.addEventListener('click', (event) => {
     if (on) {
@@ -71,6 +73,7 @@ topLeft.addEventListener('click', (event) => {
         }
     }
 })
+// Function topLeft is the function that checks if the player has clicked the top left button, and plays the sound and changes the color of the button
 
 topRight.addEventListener('click', (event) => {
     if (on) {
@@ -84,6 +87,7 @@ topRight.addEventListener('click', (event) => {
         }
     }
 })
+// Function topRight is the function that checks if the player has clicked the top right button, and plays the sound and changes the color of the button
 
 bottomLeft.addEventListener('click', (event) => {
     if (on) {
@@ -97,6 +101,7 @@ bottomLeft.addEventListener('click', (event) => {
         }
     }
 })
+// Function bottomLeft is the function that checks if the player has clicked the bottom left button, and plays the sound and changes the color of the button
 
 bottomRight.addEventListener('click', (event) => {
     if (on) {
@@ -110,6 +115,7 @@ bottomRight.addEventListener('click', (event) => {
         }
     }
 })
+// Function bottomRight is the function that checks if the player has clicked the bottom right button, and plays the sound and changes the color of the button
       
 
 
@@ -243,3 +249,4 @@ function winGame() {
     on = false;
     win = true;
 }
+//function winGame is the function that plays the winning sound and changes the color of the buttons when the player wins
