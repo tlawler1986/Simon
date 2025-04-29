@@ -13,7 +13,7 @@ body {
 
 #outer-circle {
     background: #385a94;
-    border-radius: 50%;
+    border-radius: 50%; 
     height: 500px;
     width: 500px;
     position: relative;
