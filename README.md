@@ -1,8 +1,8 @@
 <div align="center" id="banner"
   <img src= "
 
-# <Simon>
-**Created by [Tim Lawler]
+# Simon
+**Created by [Tim Lawler]**
 
 # Screenshot
 
