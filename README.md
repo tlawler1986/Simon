@@ -6,10 +6,13 @@ A nostaligic game released back in 1978 was for sure in everyone's house when th
 
 # Screenshot
 
-<img src="/images/SimonOff.jpg" alt="acreenshot">
-<img src="/images/SimonOn.jpg" alt="acreenshot">
+**Game is off** <img src="/images/SimonOff.png" alt="screenshot">
+**Game is on** <img src="/images/SimonOn.png" alt="screenshot">
+
+
 
 # Technologies Used
+
 
 - JavaScript
 - HTML
