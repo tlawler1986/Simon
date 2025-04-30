@@ -161,20 +161,6 @@ function gameTurn() {
 }
 // Function gameTurn is the function that runs the game, it flashes the colors in the sequence and checks if the player has clicked the right buttons
 
-/*function resetGame() { // Reset the game state
-    sequence = [];
-    playerSequence = []; 
-    turn = 1; 
-    flash = 0; 
-    good = true; 
-    noise = true; 
-    on = true; 
-    turnCounter.innerHTML = "0";
-    onButton.checked = false; 
-    startButton.disabled = false;
-    clearColor(); 
-}*/
-
 function one() {
     if (noise) { 
         let audio = document.getElementById("sound1"); // get the sound element
@@ -239,25 +225,14 @@ function flashColor () {
 //function flashColor is the function that flashes the colors of the buttons when the player loses or wins
 
 function check() {
-    const lastClickedButton = playerSequence[playerSequence.length - 1]; // get the last button clicked
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) { // if the last button clicked is not equal to the last button in the sequence
         good = false; // if the player clicks the wrong button, good is false
-        playWrongSound(); // call the handleWrongClick function
     }
     if (playerSequence.length == TOTAL_ROUNDS && good) { // if the player has clicked all the buttons in the right order
-        winGame()
-        playWinSound();
-        shootConfetti();
-        return; // if the player has clicked all the buttons in the right order, they win
+        winGame();     // if the player has clicked all the buttons in the right order, they win
     }
         if (good == false) { // if the player has clicked the wrong button
-            flashColor(); // flash the colors
-            turnCounter.innerHTML = "LOSER"; // set the turn counter to loser
-            setTimeout(() => { 
-                turnCounter.innerHTML = turn; // reset the turn counter
-                clearColor(); // reset the colors
-        }, 3000); // reset the colors after 3 seconds
-        noise = false; 
+            loseGame(); // call the lose game function
     }
     if (turn == playerSequence.length && good && !win) { // if the player has clicked all the buttons in the right order, and they are on the right turn
         turn++; // increment the turn
@@ -294,3 +269,14 @@ function winGame() {
     win = true; // set win to true
 }
 //function winGame is the function that plays the winning sound and changes the color of the buttons when the player wins
+
+function loseGame() {
+    turnCounter.innerHTML = "LOSER"; // set the turn counter to loser
+    playWrongSound(); // play the losing sound
+    flashColor(); // flash the colors
+    setTimeout(() => { 
+        turnCounter.innerHTML = turn; // reset the turn counter
+        clearColor(); // reset the colors
+    }, 5000); // reset the colors after 3 seconds
+    noise = false; // set noise to false
+}
