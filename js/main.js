@@ -28,16 +28,12 @@ const sound2 = document.querySelector("#sound2");
 const sound3 = document.querySelector("#sound3");
 const sound4 = document.querySelector("#sound4");
 const sound5 = document.querySelector("#sound5");
+const sound6 = document.querySelector("#sound6");
 
 const topLeft = document.querySelector("#topLeft");
 const topRight = document.querySelector("#topRight");
 const bottomLeft = document.querySelector("#bottomLeft");
 const bottomRight = document.querySelector("#bottomRight");
-
-
-
-
-
 
 
 /*----- event listeners -----*/
@@ -221,6 +217,11 @@ function playWrongSound() {
     audio.play(); // play the sound
 }
 
+function playWinSound() {
+    let audio = document.getElementById("sound6"); // get the sound element
+    audio.play(); // play the sound
+}
+
 function clearColor () {
     topLeft.style.backgroundColor = "yellow"; // reset the color of the button
     topRight.style.backgroundColor = "green"; 
@@ -238,12 +239,15 @@ function flashColor () {
 //function flashColor is the function that flashes the colors of the buttons when the player loses or wins
 
 function check() {
+    const lastClickedButton = playerSequence[playerSequence.length - 1]; // get the last button clicked
     if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) { // if the last button clicked is not equal to the last button in the sequence
         good = false; // if the player clicks the wrong button, good is false
-        playWrongSound();
+        playWrongSound(); // call the handleWrongClick function
     }
     if (playerSequence.length == TOTAL_ROUNDS && good) { // if the player has clicked all the buttons in the right order
-        winGame();
+        winGame()
+        playWinSound();
+        shootConfetti();
         return; // if the player has clicked all the buttons in the right order, they win
     }
         if (good == false) { // if the player has clicked the wrong button
@@ -266,9 +270,26 @@ function check() {
 }
 //function check is the function that checks if the player has clicked the right buttons, if they have won or lost, and if they are on the right turn
 
+function shootConfetti() {
+    confetti({
+        particleCount: 250,
+        angle: 60,
+        spread: 100,
+        origin: { x: 0 }, // set the origin of the confetti
+    });
+    confetti({
+        particleCount: 250,
+        angle: 120,
+        spread: 100,
+        origin: { x: 1 }, 
+    });
+}
+
 function winGame() {
     flashColor();
     turnCounter.innerHTML = "WINNER"; // set the turn counter to winner
+    playWinSound();
+    shootConfetti(); // play the confetti 
     on = false; // turn off the buttons
     win = true; // set win to true
 }
