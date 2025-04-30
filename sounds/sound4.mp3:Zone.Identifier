@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=about:client
+HostUrl=https://s3.amazonaws.com/freecodecamp/simonSound4.mp3

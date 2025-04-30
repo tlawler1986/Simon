@@ -168,15 +168,15 @@ function gameTurn() {
 /*function resetGame() { // Reset the game state
     sequence = [];
     playerSequence = []; 
-    turn = 1; // Start at turn 1
+    turn = 1; 
     flash = 0; 
     good = true; 
-    noise = true; // Reset sound play state
-    on = true; // Re-enable the game (buttons)
-    turnCounter.innerHTML = "0"; // Update the turn counter display to show the new starting turn
-    onButton.checked = false; // Re-enable the 'on' switch and the start button
+    noise = true; 
+    on = true; 
+    turnCounter.innerHTML = "0";
+    onButton.checked = false; 
     startButton.disabled = false;
-    clearColor(); // Optionally, reset button colors to their default states
+    clearColor(); 
 }*/
 
 function one() {
@@ -253,7 +253,7 @@ function check() {
                 turnCounter.innerHTML = turn; // reset the turn counter
                 clearColor(); // reset the colors
         }, 3000); // reset the colors after 3 seconds
-        noise = false; // set noise to false
+        noise = false; 
     }
     if (turn == playerSequence.length && good && !win) { // if the player has clicked all the buttons in the right order, and they are on the right turn
         turn++; // increment the turn
