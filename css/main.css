@@ -11,19 +11,6 @@ body {
     margin-right: 20px;
 }
 
-#outer-circle {
-    background: #385a94;
-    border-radius: 50%; 
-    height: 500px;
-    width: 500px;
-    position: relative;
-    border-style: solid;
-    border-width: 10px;
-    margin: auto;
-    margin-top: 60px;
-    box-shadow: 8px 8px 15px 5px #888888
-}
-
  #topLeft {    
     position: absolute;
     height: 250px;
@@ -70,7 +57,7 @@ body {
     position: absolute;
     height: 250px;
     width: 250px;
-    border-radius: 0 0 250px 0; /*  */
+    border-radius: 0 0 250px 0; 
     background-color: red;
     top: 50%;
     left: 50%;
@@ -86,11 +73,11 @@ body {
     font-size: 1.5em;
     background-color: lightgray;
     margin-top: 100px;
- }
+}
     
  .button:hover {
      background-color: green;
-  }   
+}   
 
 #switches {
     position: absolute;
@@ -100,15 +87,14 @@ body {
     font-size: 10px;
  }
     
- 
  #title {
-     position: absolute;
-     font-family: 'Press Start 2P', cursive;
-     font-size: 30px;
-     margin-left: 35px;
-     margin-top: 40px;
-     color: white;
-    }
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    margin-left: 35px;
+    margin-top: 40px;
+    color: white;
+}
     
 #turn {
     position: absolute;
@@ -118,8 +104,8 @@ body {
     font-size: 20px;
     height: 30px;
     width: 130px;
-    margin-left: 190px;
-    margin-top: 300px;
+    margin-left: 890px;
+    margin-top: 490px;
     text-align: center;
     vertical-align: middle;
     line-height: 30px;
@@ -128,15 +114,16 @@ body {
 .text1 {
     position: absolute;
     font-family: 'Press Start 2P', cursive;
-    margin-left: 190px;
-    margin-top: 270px;
+    margin-left: 895px;
+    margin-top: 465px;
     color: white;
     font-size: 10px;
 }
+
 .text2 {
     position: absolute;
-    margin-left: 225px;
-    margin-top: 335px;
+    margin-left: 930px;
+    margin-top: 530px;
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     color: white;

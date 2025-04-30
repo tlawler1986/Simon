@@ -76,13 +76,13 @@ topLeft.addEventListener('click', (event) => {
 })
 // topLeft is what checks if the player has clicked the top left button, and plays the sound and changes the color of the button
 
-topRight.addEventListener('click', (event) => {
-    if (on) {
-        playerSequence.push(2);
-        check();
-        two();
-        if(!win) {
-            setTimeout(() => {
+topRight.addEventListener('click', (event) => { 
+    if (on) { // if the game is on
+        playerSequence.push(2); // push the number 2 into the player sequence
+        check(); // check if the player has clicked the right button
+        two(); // play the sound and change the color of the button
+        if(!win) { // if the player hasn't won
+            setTimeout(() => { 
                 clearColor();
             }, 300);
         }
