@@ -6,6 +6,19 @@ body {
    background-position: center;
 }
 
+#outer-circle {
+    background: #385a94;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    border-style: solid;
+    border-width: 10px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 8px 8px 15px 5px #888888;
+  }
+
 .toggle {
     margin-left: 75px;
     margin-right: 20px;
@@ -103,8 +116,8 @@ body {
     font-size: 20px;
     height: 30px;
     width: 130px;
-    margin-left: 890px;
-    margin-top: 490px;
+    margin-left: 190px;
+    margin-top: 300px;
     text-align: center;
     vertical-align: middle;
     line-height: 30px;
@@ -113,16 +126,16 @@ body {
 .text1 {
     position: absolute;
     font-family: 'Press Start 2P', cursive;
-    margin-left: 895px;
-    margin-top: 465px;
+    margin-left: 195px;
+    margin-top: 270px;
     color: white;
     font-size: 10px;
 }
 
 .text2 {
     position: absolute;
-    margin-left: 930px;
-    margin-top: 530px;
+    margin-left: 225px;
+    margin-top: 335px;
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     color: white;
