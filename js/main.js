@@ -10,7 +10,7 @@ let flash; //number of flashes
 let turn; //turn number
 let good; //is the player correct
 let compTurn = false; //is it the computer's turn
-let intervalId;
+let intervalId; //interval id for the game turn
 let noise = true; //is the sound on
 let on = false; //are the buttons on
 let win; //did the player win
@@ -43,32 +43,32 @@ const bottomRight = document.querySelector("#bottomRight");
 /*----- event listeners -----*/
 
 onButton.addEventListener('click', (event) => {
-    if (onButton.checked == true) {
-        on = true; 
-        turnCounter.innerHTML = "0"; //reset the turn counter
+    if (onButton.checked == true) { // if the button is checked
+        on = true; // turn on the game
+        turnCounter.innerHTML = "-"; //reset the turn counter
     }   else {
-        on = false; 
-        turnCounter.innerHTML = ""; 
+        on = false; // turn off the game
+        turnCounter.innerHTML = ""; //reset the turn counter
         clearColor(); 
-        clearInterval(intervalId); 
+        clearInterval(intervalId); // stop the interval
     }
 });
 // onButton is the what that turns the game on and off, and resets the turn counter
 
 startButton.addEventListener('click', (event) => {
-    if (on || win) {
-        play ();        
+    if (on || win) { // if the game is on or the player has won
+        play ();  // start the game      
     }
 });
 // startButton is what starts the game, and resets the game if the player has won
 
 topLeft.addEventListener('click', (event) => {
-    if (on) {
-        playerSequence.push(1);
-        check();
-        one();
-        if(!win) {
-            setTimeout(() => {
+    if (on) { // if the game is on
+        playerSequence.push(1); // push the number 1 into the player sequence
+        check(); // check if the player has clicked the right button
+        one(); // play the sound and change the color of the button
+        if(!win) { // if the player hasn't won
+            setTimeout(() => { // clear the color of the button
                 clearColor();
             }, 300);
         }
@@ -238,11 +238,11 @@ function flashColor () {
 //function flashColor is the function that flashes the colors of the buttons when the player loses or wins
 
 function check() {
-    if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) {
+    if (playerSequence[playerSequence.length - 1] !== sequence[playerSequence.length - 1]) { // if the last button clicked is not equal to the last button in the sequence
         good = false; // if the player clicks the wrong button, good is false
         playWrongSound();
     }
-    if (playerSequence.length == TOTAL_ROUNDS && good) { 
+    if (playerSequence.length == TOTAL_ROUNDS && good) { // if the player has clicked all the buttons in the right order
         winGame();
         return; // if the player has clicked all the buttons in the right order, they win
     }
