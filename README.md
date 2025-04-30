@@ -1,7 +1,7 @@
 <div align="center" id="banner"
-  <img src= "
+  <img src= "url('../images/SimonGame.jpg')
 
-# Simon
+# SIMON
 **Created by [Tim Lawler]**
 
 # Screenshot
