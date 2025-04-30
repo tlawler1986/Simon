@@ -36,8 +36,6 @@ body {
     border-style: solid;
     border-width: 5px;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 
 #topRight {    
@@ -52,8 +50,6 @@ body {
     border-style: solid;
     border-width: 5px;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
     
 #bottomLeft {    
@@ -68,9 +64,7 @@ body {
     border-style: solid;
     border-width: 5px;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
- }
+}
 
  #bottomRight {    
     position: absolute;
@@ -84,9 +78,7 @@ body {
     border-style: solid;
     border-width: 5px;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
- }
+}
 
     
  .button {
@@ -100,8 +92,6 @@ body {
      background-color: green;
   }   
 
-
-    
 #switches {
     position: absolute;
     font-family: 'Press Start 2P', cursive;
@@ -164,6 +154,5 @@ body {
     left: 50%;
     margin: -125px 0 0 -125px;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 } 
+   
