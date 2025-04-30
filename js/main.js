@@ -253,7 +253,8 @@ function winGame() {
 
 function loseGame() {
     turnCounter.innerHTML = "LOSER"; 
-    playWrongSound(); 
+    playWrongSound();
+    flashColor(); 
     setTimeout(() => { 
         turnCounter.innerHTML = turn; 
         clearColor(); 
