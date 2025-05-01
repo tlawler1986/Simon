@@ -303,3 +303,5 @@ function flashWinSequence(times = 7, interval = 500) { // flash the winning sequ
         }
     }, interval); // set interval for the flash
 }
+
+//test
