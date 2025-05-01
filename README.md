@@ -8,7 +8,7 @@
 [Click to play Simon!](https://tlawler1986.github.io/Simon)
 
 ## 📘 Description
-A nostaligic game released back in 1978 was for sure in everyone's house when they were a kid.  It is memory testing game where players repeat a randomize sequence of colors and sounds.  The longer you play, the longer the sequence is, thus the more difficult it is to actually win.  Player will lose when they hit the wrong button and will have to restart from level 1.  To actually win, players must successfully complete 10 successful sequences without any errors.  The game will congratulate you and you can restart and test you memory once again.
+A nostaligic game released back in 1978 was for sure in everyone's house when they were a kid.  It is memory testing game where players repeat a randomize sequence of colors and sounds.  The longer you play, the longer the sequence is, thus the more difficult it is to actually win.  Player will lose when they hit the wrong button and will have to restart from level 1.  To actually win, players must successfully complete 20 successful sequences without any errors.  The game will congratulate you and you can restart and test you memory once again.
 
 # 📷 Screenshot
 
