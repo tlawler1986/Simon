@@ -35,6 +35,7 @@ const topRight = document.querySelector("#topRight");
 const bottomLeft = document.querySelector("#bottomLeft");
 const bottomRight = document.querySelector("#bottomRight");
 
+const outerCircle = document.querySelector("#outerCircle");
 
 /*----- event listeners -----*/
 
@@ -232,7 +233,7 @@ function check() {
         winGame();     // if the player has clicked all the buttons in the right order, they win
     }
         if (good == false) { // if the player has clicked the wrong button
-            loseGame(); // call the lose game function
+        loseGame(); // call the lose game function
     }
     if (turn == playerSequence.length && good && !win) { // if the player has clicked all the buttons in the right order, and they are on the right turn
         turn++; // increment the turn
@@ -247,9 +248,9 @@ function check() {
 
 function shootConfetti() {
     confetti({
-        particleCount: 250,
-        angle: 60,
-        spread: 100,
+        particleCount: 250, // number of confetti particles
+        angle: 60, // angle of the confetti
+        spread: 100, // spread of the confetti
         origin: { x: 0 }, // set the origin of the confetti
     });
     confetti({
@@ -265,6 +266,7 @@ function winGame() {
     turnCounter.innerHTML = "WINNER"; // set the turn counter to winner
     playWinSound();
     shootConfetti(); // play the confetti 
+    flashWinSequence(); // flash the winning sequence
     on = false; // turn off the buttons
     win = true; // set win to true
 }
@@ -279,4 +281,25 @@ function loseGame() {
         clearColor(); // reset the colors
     }, 5000); // reset the colors after 3 seconds
     noise = false; // set noise to false
+}
+
+function triggerExplosion() { 
+    if (outerCircle) { // check if outerCircle exists
+        outerCircle.classList.add("explosion"); // add the explosion class to the outer circle
+        setTimeout(() => { // remove the explosion class after 1 second
+            outerCircle.classList.remove("explosion"); // remove the explosion class    
+        }, 1000);      
+    }
+}
+
+function flashWinSequence(times = 7, interval = 500) { // flash the winning sequence
+    let count = 0; //
+        flashInterval = setInterval(() => { // set interval for the flash
+        flashColor();
+        setTimeout(clearColor, interval / 2); // clear the color after half the interval
+        count++; // increment the count
+        if (count >= times) { // if the count is greater than or equal to the times
+            clearInterval(flashInterval); // clear the interval
+        }
+    }, interval); // set interval for the flash
 }

@@ -1,4 +1,8 @@
 body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
    background-image: url('../images/background.jpg');
    background-size: cover;
    background-repeat: no-repeat;
@@ -6,7 +10,7 @@ body {
    background-position: center;
 }
 
-#outer-circle {
+#outerCircle {
     background: #385a94;
     border-radius: 50%;
     height: 500px;
@@ -141,7 +145,7 @@ body {
     color: white;
 }
 
-#inner-circle {
+#innerCircle {
     position: absolute;
     background: black;
     border-radius: 50%;
@@ -154,3 +158,30 @@ body {
     margin: -125px 0 0 -125px;
     box-sizing: border-box;
 } 
+
+@keyframes explosionCombo {
+    0% {
+      background-color: red;
+      transform: scale(1) translateX(0);
+    }
+    20% {
+      transform: scale(1.1) translateX(-10px);
+    }
+    40% {
+      transform: scale(1.2) translateX(10px);
+    }
+    60% {
+      transform: scale(1.1) translateX(-10px);
+    }
+    80% {
+      transform: scale(1.2) translateX(10px);
+    }
+    100% {
+      background-color: red;
+      transform: scale(1) translateX(0);
+    }
+  }
+  
+  .explosion {
+    animation: explosionCombo 0.5s ease;
+  }
