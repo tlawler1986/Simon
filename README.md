@@ -36,4 +36,4 @@ A nostaligic game released back in 1978 was for sure in everyone's house when th
 
 - [  ] Adding additional panels to make the game even more difficult
 - [  ] Adding a more difficult mode selector tab/button (faster sequence time for computer)
-- [  ] More animations added to when you win or lose
+- [X] More animations added to when you win or lose
