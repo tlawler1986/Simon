@@ -244,10 +244,10 @@ function shootConfetti() {
 }
 
 function winGame() {
-    flashColor();
     turnCounter.innerHTML = "WINNER"; 
     playWinSound();
     shootConfetti();
+    flashWinSequence();
     on = false; 
     win = true; 
 }
@@ -271,6 +271,18 @@ function triggerExplosion() {
             outerCircle.classList.remove("explosion");
         }, 1000);      
     }
+}
+
+function flashWinSequence(times = 7, interval = 500) {
+    let count = 0;
+        flashInterval = setInterval(() => {
+        flashColor();
+        setTimeout(clearColor, interval / 2);
+        count++;
+        if (count >= times) {
+            clearInterval(flashInterval);
+        }
+    }, interval);
 }
 
 
