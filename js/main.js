@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const TOTAL_ROUNDS = 3;
+const TOTAL_ROUNDS = 20;
 
 /*----- state variables -----*/
 
