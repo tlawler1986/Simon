@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const TOTAL_ROUNDS = 20;
+const TOTAL_ROUNDS = 3;
 
 /*----- state variables -----*/
 
@@ -32,6 +32,7 @@ const topRight = document.querySelector("#topRight");
 const bottomLeft = document.querySelector("#bottomLeft");
 const bottomRight = document.querySelector("#bottomRight");
 
+const outerCircle = document.querySelector("#outerCircle");
 
 /*----- event listeners -----*/
 
@@ -104,7 +105,7 @@ bottomRight.addEventListener('click', (event) => {
         }
     }
 })
-      
+     
 /*----- functions -----*/
 
 function play() {
@@ -246,13 +247,14 @@ function winGame() {
     flashColor();
     turnCounter.innerHTML = "WINNER"; 
     playWinSound();
-    shootConfetti(); 
+    shootConfetti();
     on = false; 
     win = true; 
 }
 
 function loseGame() {
     turnCounter.innerHTML = "LOSER"; 
+    triggerExplosion();
     playWrongSound();
     flashColor(); 
     setTimeout(() => { 
@@ -261,3 +263,16 @@ function loseGame() {
     }, 5000);
     noise = false; 
 }
+
+function triggerExplosion() {
+    if (outerCircle) {
+        outerCircle.classList.add("explosion");
+        setTimeout(() => {
+            outerCircle.classList.remove("explosion");
+        }, 1000);      
+    }
+}
+
+
+  
+  
