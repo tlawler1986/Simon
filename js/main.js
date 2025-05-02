@@ -1,5 +1,5 @@
 /*----- constants -----*/
-const TOTAL_ROUNDS = 20;
+const TOTAL_ROUNDS = 3;
 
 /*----- state variables -----*/
 
@@ -267,14 +267,14 @@ function loseGame() {
 function triggerExplosion() {
     if (outerCircle) {
         outerCircle.classList.add("explosion");
-        setTimeout(() => {
+        setTimeout(() => { 
             outerCircle.classList.remove("explosion");
         }, 1000);      
     }
 }
 
 function flashWinSequence(times = 7, interval = 500) {
-    let count = 0;
+    let count = 0; 
         flashInterval = setInterval(() => {
         flashColor();
         setTimeout(clearColor, interval / 2);
