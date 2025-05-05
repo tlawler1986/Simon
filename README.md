@@ -3,7 +3,6 @@
 </div>
 
 # 🎲 Simon
-**Created by Tim Lawler**
 
 [Click to play Simon!](https://tlawler1986.github.io/Simon)
 
